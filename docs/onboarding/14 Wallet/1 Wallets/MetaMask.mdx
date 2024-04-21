@@ -24,6 +24,52 @@ wallet.connect();
 Optionally, provide a configuration object when instantiating the `MetaMaskWallet` class.
 
 <details>
+  <summary>clientId (recommended) </summary>
+  <div>
+
+Provide `clientId` to use the thirdweb RPCs for given `chains`
+
+You can create a client ID for your application from [thirdweb dashboard](https://thirdweb.com/create-api-key).
+
+```javascript
+import { MetaMaskWallet } from "@thirdweb-dev/wallets";
+
+const wallet = new MetaMaskWallet(
+  // highlight-start
+  {
+    clientId: "YOUR_CLIENT_ID",
+  },
+  // highlight-end
+);
+```
+
+</div>
+</details>
+
+<details>
+  <summary>projectId (recommended) </summary>
+  <div>
+
+This is only relevant if you want to use [WalletConnect](https://walletconnect.com/) for connecting to MetaMask mobile app when MetaMask is not injected.
+
+This `projectId` can be obtained at [cloud.walletconnect.com](https://cloud.walletconnect.com/). It is highly recommended to use your own project id and only use the default one for testing purposes.
+
+```javascript
+import { MetaMaskWallet } from "@thirdweb-dev/wallets";
+
+const wallet = new MetaMaskWallet(
+  // highlight-start
+  {
+    projectId: "YOUR_WALLET_CONNECT_PROJECT_ID",
+  },
+  // highlight-end
+);
+```
+
+</div>
+</details>
+
+<details>
   <summary>chains</summary>
   <div>
 
@@ -143,7 +189,7 @@ const walletWithOptions = new MetaMaskWallet(
 
 ## Methods
 
-Inherhits all the public methods from the [`AbstractClientWallet`](interfaces/abstract-client-wallet) class.
+Inherits all the public methods from the [`AbstractClientWallet`](interfaces/abstract-client-wallet) class.
 
 ### connectWithQrCode
 
@@ -157,7 +203,7 @@ await wallet.connectWithQrCode({
   onConnected(accountAddress) {
     // update UI to show connected state
   },
-  chainId: 1, // optional
+  chainId: 1, // optional - if provided, It forces the wallet to switch to the given chainId after connecting
 });
 ```
 

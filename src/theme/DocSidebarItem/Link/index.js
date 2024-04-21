@@ -31,13 +31,12 @@ export const iconMapping = {
   GamingKit: "/assets/solutions/gaming.png",
   CommerceKit: "/assets/solutions/commerce.png",
   Minting: "/assets/product/sdk.png",
-  Mobile: "/assets/product/sdk.png",
   "Digital Collectibles": "/assets/product/sdk.png",
   Storage: "/assets/product/storage.png",
   "UI Components": "/assets/product/ui.png",
   Home: "/assets/icons/home.png",
   "Overview ": "/assets/icons/wrench.png",
-  "Getting Started": "/assets/icons/rocket.png",
+  "API Keys": "/assets/icons/rocket.png",
   Templates: "/assets/resources/sdk-reference.svg",
   Guides: "/assets/resources/guides.svg",
   CLI: "/assets/product/CLI.png",
@@ -109,7 +108,7 @@ export default function DocSidebarItemLink({
             ${
               (label === "Home" ||
                 label === "Overview " ||
-                label === "Getting Started") &&
+                label === "API Keys") &&
               styles.invertLightIcon
             }
               

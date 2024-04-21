@@ -30,6 +30,11 @@ const sidebars = {
     },
     {
       type: "doc",
+      label: "ThirdwebManager",
+      id: "ThirdwebManager",
+    },
+    {
+      type: "doc",
       label: "ThirdwebSDK",
       id: "thirdwebsdk",
     },
@@ -42,18 +47,8 @@ const sidebars = {
       items: [
         {
           type: "doc",
-          label: "ThirdwebManager",
-          id: "prefabs/ThirdwebManager",
-        },
-        {
-          type: "doc",
           label: "Connect Wallet Button",
           id: "prefabs/ConnectWallet",
-        },
-        {
-          type: "doc",
-          label: "Connect Wallet Button (Native)",
-          id: "prefabs/ConnectWalletNative",
         },
         {
           type: "doc",
@@ -176,6 +171,13 @@ const sidebars = {
       type: "doc",
       label: "Storage",
       id: "storage/storage",
+    },
+
+    // Submit Wallet
+    {
+      type: "doc",
+      label: "Submit Wallet",
+      id: "submit-wallet",
     },
   ],
 };
